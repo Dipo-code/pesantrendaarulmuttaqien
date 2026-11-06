@@ -122,13 +122,13 @@
     <main class="w-full pt-20 bg-surface min-h-screen">
         <div class="flex flex-col w-full">
             <!-- 1. HERO SECTION -->
-            <section class="relative bg-primary text-on-primary overflow-hidden py-12 lg:py-16" id="beranda">
+            <section class="relative bg-primary text-on-primary overflow-hidden pt-12 pb-48 lg:pt-16 lg:pb-56" id="beranda">
                 <div class="relative max-w-7xl mx-auto px-6 lg:px-12">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
                         <div class="lg:col-span-7 flex flex-col items-start text-left">
                             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-container text-secondary-fixed border border-white/10 mb-6">
                                 <span class="material-symbols-outlined text-[18px] text-secondary-container">verified</span>
-                                <span class="font-label-lg text-label-lg font-semibold">Pendidikan Islam Terpadu <span class="text-secondary-container">&bull;</span> Sepatan &amp; Pasar Kemis</span>
+                                <span class="font-label-lg text-label-lg font-semibold">Pendidikan Islam Terpadu <span class="text-secondary-container">&bull;</span> Sepatan</span>
                             </div>
                             <h1 class="font-display-lg text-4xl sm:text-5xl lg:text-[60px] leading-[1.05] tracking-normal max-w-3xl text-on-primary mb-6">
                                 Pondok Pesantren Modern <span class="font-headline-lg italic text-secondary-container">Daarul Muttaqien</span> Tangerang
@@ -169,30 +169,10 @@
                             </div>
                         </aside>
                     </div>
-                    <div class="w-full mt-8 rounded-xl bg-primary-container/80 px-4 py-5 sm:px-6 shadow-md border border-white/5">
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-5 text-center">
-                            <div class="flex flex-col items-center">
-                                <span class="font-display-lg text-2xl sm:text-3xl font-bold text-secondary-container">3.500+</span>
-                                <span class="font-label-sm text-[9px] sm:text-label-sm uppercase tracking-wide text-on-primary-container mt-1">Santri Mukim Aktif</span>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <span class="font-display-lg text-2xl sm:text-3xl font-bold text-secondary-container">100%</span>
-                                <span class="font-label-sm text-[9px] sm:text-label-sm uppercase tracking-wide text-on-primary-container mt-1">Lulusan Diterima PTN / Timteng</span>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <span class="font-display-lg text-2xl sm:text-3xl font-bold text-secondary-container">30 Juz</span>
-                                <span class="font-label-sm text-[9px] sm:text-label-sm uppercase tracking-wide text-on-primary-container mt-1">Sentra Tahfidz Mutqin</span>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <span class="font-display-lg text-2xl sm:text-3xl font-bold text-secondary-container">2 Kampus</span>
-                                <span class="font-label-sm text-[9px] sm:text-label-sm uppercase tracking-wide text-on-primary-container mt-1">Sepatan &amp; Pasar Kemis</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
             <!-- 1.5 SECTION BARU: KUTIPAN PIMPINAN PESANTREN -->
-            <section class="relative z-20 -mt-8 lg:-mt-10 max-w-6xl mx-auto px-6 lg:px-12" id="profil">
+            <section class="relative z-20 -mt-40 lg:-mt-48 max-w-6xl mx-auto px-6 lg:px-12 pt-12 lg:pt-16 pb-20 lg:pb-24" id="profil">
                 <div
                     class="bg-surface-container-lowest rounded-3xl p-8 lg:p-12 shadow-2xl border border-secondary-container/20 relative overflow-hidden backdrop-blur-sm">
                     <!-- Ornamen Watermark Tanda Kutip Raksasa Emas Semi-Transparan -->
@@ -203,9 +183,12 @@
                         <div class="lg:col-span-5 flex flex-col items-center">
                             <div
                                 class="relative group w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl border-2 border-secondary-container/30 bg-primary-container">
-                                <img alt="KH. Ahmad Madani, M.A. - Pimpinan Pesantren Daarul Muttaqien"
+                                <img id="leader-image" alt="KH. Ahmad Madani, M.A. - Pimpinan Pesantren Daarul Muttaqien"
                                     class="w-full h-80 lg:h-96 object-cover object-top group-hover:scale-105 transition-transform duration-500"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQwjO1bfriwOeK8QY1R3JMdlEktFIgqipVz2UgmskvUvBBDAMAy1oj0rcgmD_YBaVFnSwoEQylaSjSjSiTZb5j7w6hcRtLwMGjkqu9r40YjZC1wS2K0QJJxKg5MXas-Jkle2p5Q1SPZ1dcJ3iGJuplrQUNXZ8ODuu1B_AMDXJGU8EFlEehW5yCdtPSGzytIhKCmHD0YizY1q3K1Pon6gGsJC_8i5iOryY19kaWA8Q" />
+                                <div id="leader-image-placeholder" class="hidden absolute inset-0 flex items-center justify-center bg-primary-container text-secondary-container">
+                                    <span class="material-symbols-outlined text-[96px]">person</span>
+                                </div>
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent">
                                 </div>
@@ -225,7 +208,7 @@
                                 <span class="w-8 h-0.5 bg-secondary-container"></span>
                                 <span>Amanat &amp; Pandangan Pengasuh</span>
                             </div>
-                            <blockquote
+                            <blockquote id="leader-quote" aria-live="polite"
                                 class="font-headline-lg text-headline-md lg:text-headline-lg italic font-semibold text-primary leading-tight tracking-tight mb-6">
                                 "Mendidik Hati, Menajamkan Akal, Menegakkan Adab Islami."
                             </blockquote>
@@ -237,11 +220,26 @@
                             <div class="pt-4 border-t border-outline-variant/30 flex items-center gap-4">
                                 <div class="w-1.5 h-12 bg-secondary-container rounded-full"></div>
                                 <div>
-                                    <h4 class="font-title-lg text-title-lg font-bold text-on-surface tracking-tight">KH.
+                                    <h4 id="leader-name" class="font-title-lg text-title-lg font-bold text-on-surface tracking-tight">KH.
                                         Ahmad Madani, M.A.</h4>
-                                    <p class="font-label-md text-label-md text-secondary font-medium">Pimpinan Pesantren
+                                    <p id="leader-title" class="font-label-md text-label-md text-secondary font-medium">Pimpinan Pesantren
                                         Daarul Muttaqien</p>
                                 </div>
+                            </div>
+                            <div class="flex items-center gap-3 mt-5" aria-label="Navigasi kutipan pemimpin">
+                                <button type="button" onclick="changeLeaderQuote(-1)" aria-label="Kutipan sebelumnya"
+                                    class="w-10 h-10 rounded-full border border-outline-variant text-primary hover:bg-surface-container transition-colors">
+                                    <span class="material-symbols-outlined">chevron_left</span>
+                                </button>
+                                <button type="button" id="leader-dot-0" onclick="showLeaderQuote(0)" aria-label="Kutipan pemimpin pertama" aria-pressed="true"
+                                    class="w-3 h-3 rounded-full bg-primary transition-colors"></button>
+                                <button type="button" id="leader-dot-1" onclick="showLeaderQuote(1)" aria-label="Kutipan pemimpin kedua" aria-pressed="false"
+                                    class="w-3 h-3 rounded-full bg-outline-variant transition-colors"></button>
+                                <button type="button" onclick="changeLeaderQuote(1)" aria-label="Kutipan berikutnya"
+                                    class="w-10 h-10 rounded-full border border-outline-variant text-primary hover:bg-surface-container transition-colors">
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </button>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant ml-1">Berganti otomatis</span>
                             </div>
                         </div>
                     </div>
@@ -404,7 +402,7 @@
                     </div>
                 </div>
             </section>
-            <!-- 3. ROMBAK TOTAL SECTION INFORMASI KAMPUS (TAB PANEL INTERAKTIF & GOOGLE MAPS) -->
+            <!-- 3. INFORMASI LOKASI PENDIDIKAN -->
             <section class="py-24 bg-surface-container-low" id="kampus">
                 <div class="max-w-7xl mx-auto px-6 lg:px-12">
                     <div class="text-center max-w-2xl mx-auto mb-12">
@@ -413,31 +411,14 @@
                             Pusat Pendidikan
                         </span>
                         <h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
-                            Dua Kampus Terintegrasi &amp; Representatif
+                            Satu Kampus Terintegrasi &amp; Representatif
                         </h2>
                         <p class="font-body-md text-body-md text-on-surface-variant mt-3">
-                            Pilih kampus di bawah ini untuk melihat detail fasilitas, rincian biaya, dan peta lokasi
-                            akurat.
+                            Jelajahi fasilitas, rincian biaya, dan lokasi pendidikan Daarul Muttaqien.
                         </p>
                     </div>
-                    <!-- Tab Switcher Navigasi -->
-                    <div class="flex justify-center mb-12">
-                        <div
-                            class="inline-flex p-1.5 bg-surface-container rounded-2xl shadow-inner border border-outline-variant/30 gap-2">
-                            <button
-                                class="tab-btn px-6 py-3.5 rounded-xl font-label-lg text-label-lg font-bold flex items-center gap-2.5 transition-all duration-300 bg-primary-container text-on-primary shadow-md"
-                                id="tab-btn-1" onclick="switchCampusTab(1)"><span
-                                    class="material-symbols-outlined text-[20px] text-secondary-container">domain</span><span>Kampus
-                                    1: MTs &amp; MA (Sepatan)</span></button>
-                            <button
-                                class="tab-btn px-6 py-3.5 rounded-xl font-label-lg text-label-lg font-semibold flex items-center gap-2.5 transition-all duration-300 text-on-surface-variant hover:text-primary hover:bg-surface-container-high"
-                                id="tab-btn-2" onclick="switchCampusTab(2)"><span
-                                    class="material-symbols-outlined text-[20px]">school</span><span>Kampus 2: SMP IT
-                                    (Pasar Kemis)</span></button>
-                        </div>
-                    </div>
-                    <!-- PANEL TAB 1: KAMPUS 1 SEPATAN -->
-                    <div class="campus-panel block animate-fade-in" id="tab-content-1">
+                    <!-- Lokasi pendidikan Sepatan -->
+                    <div class="animate-fade-in">
                         <div
                             class="bg-surface-container-lowest rounded-3xl p-6 lg:p-10 shadow-sm border border-outline-variant/20">
                             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -449,7 +430,7 @@
                                             Tsanawiyah (MTs) &amp; Madrasah Aliyah (MA)</span></div>
                                     <h3
                                         class="font-headline-md text-headline-md lg:text-[34px] font-bold text-on-surface mt-4 tracking-tight">
-                                        Kampus 1 — Sepatan, Tangerang</h3>
+                                        Sepatan, Tangerang</h3>
                                     <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mt-3">
                                         Pusat pendidikan tingkat menengah pertama dan atas terpadu dengan integrasi
                                         kurikulum Kementerian Agama serta Kulliyatul Mu'allimin Al-Islamiyyah, membina
@@ -458,7 +439,7 @@
                                         class="bg-surface-container-low rounded-2xl p-6 border border-outline-variant/30 mt-6">
                                         <span
                                             class="text-[11px] font-bold text-on-surface-variant tracking-wider uppercase block mb-4">KEUNGGULAN
-                                            UTAMA KAMPUS 1</span>
+                                            UTAMA</span>
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                                             <div
                                                 class="flex items-center gap-2.5 font-body-sm text-body-sm text-on-surface">
@@ -487,7 +468,7 @@
                                             href="https://wa.me/6281383099039" rel="noopener noreferrer"
                                             target="_blank"><span
                                                 class="material-symbols-outlined text-[20px]">chat</span><span>Hubungi
-                                                Panitia Kampus 1: 0813-8309-9039</span></a><a
+                                                Panitia: 0813-8309-9039</span></a><a
                                             class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container shadow-sm transition-all"
                                             href="https://maps.google.com" rel="noopener noreferrer"
                                             target="_blank"><span
@@ -501,7 +482,7 @@
                                                 class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">location_on</span>
                                             <div>
                                                 <h4 class="font-title-md text-title-md font-bold text-on-surface">Alamat
-                                                    Lengkap Kampus 1</h4>
+                                                Lengkap</h4>
                                                 <p
                                                     class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
                                                     Jl. Raya Mauk Km 11 Kp. Cadas, Kec. Sepatan, Kab. Tangerang, Banten
@@ -516,7 +497,7 @@
                                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2!2d106.5512!3d-6.1423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5b000000000%3A0x9a85f7a71b0d6699!2sPondok+Pesantren+Daarul+Muttaqien!5e0!3m2!1sid!2sid!4v1699900000000!5m2!1sid!2sid"
                                                 width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy"
                                                 referrerpolicy="no-referrer-when-downgrade"
-                                                title="Peta Lokasi Kampus 1 Daarul Muttaqien Sepatan">
+                                                title="Peta Lokasi Pesantren Daarul Muttaqien Sepatan">
                                             </iframe>
                                         </div>
                                             <div
@@ -541,8 +522,7 @@
                                                 <div
                                                     class="mt-1 bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1 rounded-lg shadow-sm border border-primary/20 text-center">
                                                     <span
-                                                        class="text-[11px] font-bold text-primary block leading-tight">Kampus
-                                                        1 Sepatan</span></div>
+                                                        class="text-[11px] font-bold text-primary block leading-tight">Sepatan</span></div>
                                             </div>
                                         </div>
                                     </div>
@@ -570,7 +550,7 @@
                                             class="text-[11px] font-bold text-secondary tracking-wider uppercase block">DOKUMENTASI
                                             LOKASI</span>
                                         <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">
-                                            Foto Lingkungan &amp; Sarana Kampus 1 Sepatan</h4>
+                                            Foto Lingkungan &amp; Sarana Pesantren Sepatan</h4>
                                     </div>
                                     <div class="flex items-center gap-1 text-label-sm text-on-surface-variant"><span
                                             class="material-symbols-outlined text-[16px]">zoom_in</span><span>Klik foto
@@ -616,189 +596,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- PANEL TAB 2: KAMPUS 2 PASAR KEMIS -->
-                    <div class="campus-panel hidden animate-fade-in" id="tab-content-2">
-                        <div
-                            class="bg-surface-container-lowest rounded-3xl p-6 lg:p-10 shadow-sm border border-outline-variant/20">
-                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                                <div class="lg:col-span-7 flex flex-col">
-                                    <div
-                                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-label-sm font-semibold border border-secondary/20 w-max">
-                                        <span
-                                            class="material-symbols-outlined text-[16px] text-secondary">school</span><span>Sekolah
-                                            Menengah Pertama (SMP IT Boarding School)</span></div>
-                                    <h3
-                                        class="font-headline-md text-headline-md lg:text-[34px] font-bold text-on-surface mt-4 tracking-tight">
-                                        Kampus 2 — Pasar Kemis, Tangerang</h3>
-                                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mt-3">
-                                        Pusat pendidikan tingkat menengah berkonsep Integrated Islamic Boarding School
-                                        dengan akselerasi tahfidz, penguatan sains modern, coding, robotics, serta
-                                        pembinaan akhlak mulia dan kepemimpinan.</p>
-                                    <div
-                                        class="bg-surface-container-low rounded-2xl p-6 border border-outline-variant/30 mt-6">
-                                        <span
-                                            class="text-[11px] font-bold text-on-surface-variant tracking-wider uppercase block mb-4">KEUNGGULAN
-                                            UTAMA KAMPUS 2</span>
-                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                                            <div
-                                                class="flex items-center gap-2.5 font-body-sm text-body-sm text-on-surface">
-                                                <span
-                                                    class="material-symbols-outlined text-[20px] text-secondary shrink-0">check_circle</span><span>Smart
-                                                    Digital Classroom &amp; Smartboard Interaktif</span></div>
-                                            <div
-                                                class="flex items-center gap-2.5 font-body-sm text-body-sm text-on-surface">
-                                                <span
-                                                    class="material-symbols-outlined text-[20px] text-secondary shrink-0">check_circle</span><span>Pusat
-                                                    Pembinaan Robotika &amp; Coding Nasional</span></div>
-                                            <div
-                                                class="flex items-center gap-2.5 font-body-sm text-body-sm text-on-surface">
-                                                <span
-                                                    class="material-symbols-outlined text-[20px] text-secondary shrink-0">check_circle</span><span>Lingkungan
-                                                    Hijau Asri &amp; Fasilitas Ramah Santri</span></div>
-                                            <div
-                                                class="flex items-center gap-2.5 font-body-sm text-body-sm text-on-surface">
-                                                <span
-                                                    class="material-symbols-outlined text-[20px] text-secondary shrink-0">check_circle</span><span>Klinik
-                                                    Pratama &amp; Bimbingan Konseling Remaja</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-wrap gap-4 mt-6"><a
-                                            class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:opacity-95 shadow-sm transition-all"
-                                            href="https://wa.me/6281382545484" rel="noopener noreferrer"
-                                            target="_blank"><span
-                                                class="material-symbols-outlined text-[20px]">chat</span><span>Hubungi
-                                                Panitia Kampus 2: 0813-8254-5484</span></a><a
-                                            class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container shadow-sm transition-all"
-                                            href="https://maps.google.com" rel="noopener noreferrer"
-                                            target="_blank"><span
-                                                class="material-symbols-outlined text-[20px] text-primary">map</span><span>Petunjuk
-                                                Google Maps</span></a></div>
-                                </div>
-                                <div class="lg:col-span-5 flex flex-col">
-                                    <div
-                                        class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm p-5 mb-5">
-                                        <div class="flex items-start gap-2 mb-2"><span
-                                                class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">location_on</span>
-                                            <div>
-                                                <h4 class="font-title-md text-title-md font-bold text-on-surface">Alamat
-                                                    Lengkap Kampus 2</h4>
-                                                <p
-                                                    class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-                                                    Jl. Raya Cadas Kukun Kp. Lati, Kec. Pasar Kemis, Kab. Tangerang,
-                                                    Banten 15560</p>
-                                                <p class="text-label-sm text-secondary font-medium mt-1">Patokan: Dekat
-                                                    Perumahan Puri Jaya &amp; Pasar Kukun</p>
-                                            </div>
-                                        </div>
-                                        <div class="relative">
-                                        <div class="rounded-xl overflow-hidden border border-outline-variant/20 mt-3 h-52 relative shadow-sm">
-                                            <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4!2d106.5232!3d-6.1685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5ab00000000%3A0x1234567890abcdef!2sDaarul+Muttaqien+Pasar+Kemis!5e0!3m2!1sid!2sid!4v1699900000001!5m2!1sid!2sid"
-                                                width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy"
-                                                referrerpolicy="no-referrer-when-downgrade"
-                                                title="Peta Lokasi Kampus 2 Daarul Muttaqien Pasar Kemis">
-                                            </iframe>
-                                        </div>
-                                            <div
-                                                class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                                <svg class="w-full h-full opacity-40" fill="none" viewbox="0 0 500 400">
-                                                    <path d="M0 150 Q 200 250 500 180" stroke="#707972"
-                                                        stroke-linecap="round" stroke-width="12"></path>
-                                                    <path d="M220 0 L 220 400" stroke="#707972" stroke-linecap="round"
-                                                        stroke-width="10"></path>
-                                                    <path d="M50 400 L 450 50" stroke="#c0c9c1" stroke-width="6"></path>
-                                                </svg></div>
-                                            <div
-                                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-                                                <div class="relative flex items-center justify-center"><span
-                                                        class="animate-ping absolute inline-flex h-10 w-10 rounded-full bg-secondary opacity-30"></span>
-                                                    <div
-                                                        class="relative w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-lg border-2 border-surface-container-lowest">
-                                                        <span
-                                                            class="material-symbols-outlined text-[20px]">school</span>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="mt-1 bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1 rounded-lg shadow-sm border border-secondary/20 text-center">
-                                                    <span
-                                                        class="text-[11px] font-bold text-on-surface block leading-tight">Kampus
-                                                        2 Pasar Kemis</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bg-primary-container rounded-2xl p-5 sm:p-6 text-on-primary shadow-md border border-primary">
-                                        <div class="flex flex-col items-start gap-2 mb-5">
-                                            <h4 class="font-label-lg text-label-lg font-bold text-on-primary">Rincian Biaya Pendidikan &amp; Masuk</h4>
-                                            <span class="bg-primary text-secondary-container text-[11px] px-2.5 py-1 rounded-full font-semibold border border-secondary-container/20">Tahun Ajaran 2024/2025</span>
-                                        </div>
-                                        <div class="space-y-4">
-                                            <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto] sm:items-center gap-1.5 sm:gap-4 pb-4 border-b border-on-primary-container/20">
-                                                <span class="font-body-sm text-body-sm text-on-primary-container">Uang Masuk &amp; Perlengkapan</span>
-                                                <span class="font-title-lg text-title-lg font-bold text-secondary-container">Rp 9.500.000</span>
-                                            </div>
-                                            <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto] sm:items-center gap-1.5 sm:gap-4">
-                                                <span class="font-body-sm text-body-sm text-on-primary-container">Iuran Bulanan (SPP + Asrama + Makan 3x)</span>
-                                                <span class="font-title-md text-title-md font-semibold text-secondary-container">Rp 650.000 <span class="text-xs font-normal text-on-primary-container">/ bln</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-12 pt-8 border-t border-outline-variant/30">
-                                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-5">
-                                    <div><span
-                                            class="text-[11px] font-bold text-secondary tracking-wider uppercase block">DOKUMENTASI
-                                            LOKASI</span>
-                                        <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">
-                                            Foto Lingkungan &amp; Sarana Kampus 2 Pasar Kemis</h4>
-                                    </div>
-                                    <div class="flex items-center gap-1 text-label-sm text-on-surface-variant"><span
-                                            class="material-symbols-outlined text-[16px]">zoom_in</span><span>Klik foto
-                                            untuk memperbesar</span></div>
-                                </div>
-                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                    <div class="rounded-xl overflow-hidden relative group aspect-[4/3] shadow-sm"><img
-                                            alt="Gedung Pusat Pembelajaran SMP IT"
-                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                            src="https://lh3.googleusercontent.com/aida/AEtjO1UjqMDHaIBwQAS6OqoLMDGKAvYmfualvxctmYoMPJSHmoJK1c4RheSPcoQuA-c60-MVCia_Gleo0hawB2ARQstzvFSrljeSx6yWAk6vdzPNQ_Gz-MlcLtaMfi_rXasWoeuIn4zUYU7CzUNVXfc0Ee-Rg5VSkPoTSn0AlHx51GRJD-dNfGc63UxGUdA2Nh7AXSigzeH0kBBp3ZvOz374HIF79GQ5QIreWB6IsSc9KTVt" />
-                                        <div
-                                            class="bg-gradient-to-t from-primary/90 via-primary/30 to-transparent absolute inset-0 flex items-end p-3.5">
-                                            <span class="text-white font-medium text-xs md:text-sm drop-shadow">Gedung
-                                                Pusat Pembelajaran SMP IT</span></div>
-                                    </div>
-                                    <div class="rounded-xl overflow-hidden relative group aspect-[4/3] shadow-sm"><img
-                                            alt="Plaza Utama &amp; Lanskap Hijau"
-                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                            src="https://lh3.googleusercontent.com/aida/AEtjO1Wb4K2MSbGIkvJkDXFowFmzYAUMuo73SgnYUAdWDPJw6cUbBMO8oFvrGadh_hpEcI6d5E-ph4uSJoFNDmWxknrrJVf9Ep_lki138sxaedQgtoO2ZacfZUKJz8hQx8DBVoUNPVuD1qis-BlK61frbA-SEES2xDfzE_GdJsfZ2BBU11tm5Va7Jc-3Blq44zw-UPC9FdFbZ64804BFo8fPoSpVrxruub3iBA_gniwTfCtQ" />
-                                        <div
-                                            class="bg-gradient-to-t from-primary/90 via-primary/30 to-transparent absolute inset-0 flex items-end p-3.5">
-                                            <span class="text-white font-medium text-xs md:text-sm drop-shadow">Plaza
-                                                Utama &amp; Lanskap Hijau</span></div>
-                                    </div>
-                                    <div class="rounded-xl overflow-hidden relative group aspect-[4/3] shadow-sm"><img
-                                            alt="Lab Sains, Komputer &amp; Robotika"
-                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2Mq3ssxwbyLbRWoedG-bEyGMyQynUnh5iv0mo9BKLUuf1ItZoH-9kNiw5J732biyIcE3tUGTZ7G-jtB12DUmNVCcRd0J1Jn6Iki7oJ3ievBQJo_ZiHqgsicSkFnWxIoYDsKx_UwxnfmIGXoeiBL6y9mAwUtVX4vAJ-nr1PJlFBUOuUnp0EDjE1DFGKORBfK10b1NWM69QJEi7NLEn-LIpK8Kby5fHSNmTGdMkZ1s" />
-                                        <div
-                                            class="bg-gradient-to-t from-primary/90 via-primary/30 to-transparent absolute inset-0 flex items-end p-3.5">
-                                            <span class="text-white font-medium text-xs md:text-sm drop-shadow">Lab
-                                                Sains, Komputer &amp; Robotika</span></div>
-                                    </div>
-                                    <div class="rounded-xl overflow-hidden relative group aspect-[4/3] shadow-sm"><img
-                                            alt="Asrama Modern &amp; Ruang Belajar"
-                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                            src="https://lh3.googleusercontent.com/aida/AEtjO1Wb4K2MSbGIkvJkDXFowFmzYAUMuo73SgnYUAdWDPJw6cUbBMO8oFvrGadh_hpEcI6d5E-ph4uSJoFNDmWxknrrJVf9Ep_lki138sxaedQgtoO2ZacfZUKJz8hQx8DBVoUNPVuD1qis-BlK61frbA-SEES2xDfzE_GdJsfZ2BBU11tm5Va7Jc-3Blq44zw-UPC9FdFbZ64804BFo8fPoSpVrxruub3iBA_gniwTfCtQ" />
-                                        <div
-                                            class="bg-gradient-to-t from-primary/90 via-primary/30 to-transparent absolute inset-0 flex items-end p-3.5">
-                                            <span class="text-white font-medium text-xs md:text-sm drop-shadow">Asrama
-                                                Modern &amp; Ruang Belajar</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </div>                </div>
             </section>
             <!-- 4. SECTION SIKLUS KEGIATAN SANTRI (Vertical Timeline 24 Jam) -->
             <section class="py-24 lg:py-32 bg-surface" id="kegiatan-santri">
@@ -1731,7 +1529,7 @@
     </main>
     <footer class="w-full bg-primary-container text-on-surface-variant">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-10">
                 <div class="lg:col-span-4 flex flex-col gap-4">
                     <div class="flex items-center gap-3"><img alt="Logo Daarul Muttaqien"
                             class="h-8 w-auto object-contain brightness-0 invert"
@@ -1759,7 +1557,7 @@
                 </div>
                 <div class="lg:col-span-4 flex flex-col gap-4">
                     <h4 class="font-title-md text-title-md text-on-primary font-semibold border-b border-primary pb-2">
-                        Kampus 1: Sepatan</h4>
+                    Lokasi Pesantren</h4>
                     <div class="flex flex-col gap-2.5 text-body-sm text-on-primary-container">
                         <p class="leading-relaxed">Jl. Raya Mauk Km 11 Kp. Cadas, Kec. Sepatan, Kab. Tangerang, Banten
                             15520</p>
@@ -1775,30 +1573,7 @@
                         <div class="pt-1"><a
                                 class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-primary text-secondary-container font-label-sm text-label-sm hover:bg-primary transition-colors"
                                 href="https://maps.google.com" rel="noopener noreferrer" target="_blank"><span
-                                    class="material-symbols-outlined text-[16px]">pin_drop</span><span>Maps Kampus
-                                    1</span></a></div>
-                    </div>
-                </div>
-                <div class="lg:col-span-4 flex flex-col gap-4">
-                    <h4 class="font-title-md text-title-md text-on-primary font-semibold border-b border-primary pb-2">
-                        Kampus 2: Pasar Kemis</h4>
-                    <div class="flex flex-col gap-2.5 text-body-sm text-on-primary-container">
-                        <p class="leading-relaxed">Jl. Raya Cadas Kukun Kp. Lati, Kec. Pasar Kemis, Kab. Tangerang,
-                            Banten 15560</p>
-                        <div class="flex items-center gap-2"><span
-                                class="material-symbols-outlined text-secondary-container text-[18px]">call</span><a
-                                class="hover:text-secondary-container transition-colors"
-                                href="tel:081382545484">0813-8254-5484</a></div>
-                        <div class="flex items-center gap-2"><span
-                                class="material-symbols-outlined text-secondary-container text-[18px]">photo_camera</span><a
-                                class="hover:text-secondary-container transition-colors"
-                                href="https://instagram.com/daarulmuttaqien2_official" rel="noopener noreferrer"
-                                target="_blank">@daarulmuttaqien2_official</a></div>
-                        <div class="pt-1"><a
-                                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-primary text-secondary-container font-label-sm text-label-sm hover:bg-primary transition-colors"
-                                href="https://maps.google.com" rel="noopener noreferrer" target="_blank"><span
-                                    class="material-symbols-outlined text-[16px]">pin_drop</span><span>Maps Kampus
-                                    2</span></a></div>
+                                    class="material-symbols-outlined text-[16px]">pin_drop</span><span>Petunjuk Lokasi</span></a></div>
                     </div>
                 </div>
             </div>
@@ -1814,30 +1589,67 @@
         </div>
     </footer>
     <script>
-        function switchCampusTab(campusNum) {
-            const panel1 = document.getElementById('tab-content-1');
-            const panel2 = document.getElementById('tab-content-2');
-            const btn1 = document.getElementById('tab-btn-1');
-            const btn2 = document.getElementById('tab-btn-2');
-
-            if (campusNum === 1) {
-                panel1.classList.remove('hidden');
-                panel1.classList.add('block');
-                panel2.classList.remove('block');
-                panel2.classList.add('hidden');
-
-                btn1.className = "tab-btn px-6 py-3.5 rounded-xl font-label-lg text-label-lg font-bold flex items-center gap-2.5 transition-all duration-300 bg-primary-container text-on-primary shadow-md";
-                btn2.className = "tab-btn px-6 py-3.5 rounded-xl font-label-lg text-label-lg font-semibold flex items-center gap-2.5 transition-all duration-300 text-on-surface-variant hover:text-primary hover:bg-surface-container-high";
-            } else {
-                panel2.classList.remove('hidden');
-                panel2.classList.add('block');
-                panel1.classList.remove('block');
-                panel1.classList.add('hidden');
-
-                btn2.className = "tab-btn px-6 py-3.5 rounded-xl font-label-lg text-label-lg font-bold flex items-center gap-2.5 transition-all duration-300 bg-primary-container text-on-primary shadow-md";
-                btn1.className = "tab-btn px-6 py-3.5 rounded-xl font-label-lg text-label-lg font-semibold flex items-center gap-2.5 transition-all duration-300 text-on-surface-variant hover:text-primary hover:bg-surface-container-high";
+        const leaderQuotes = [
+            {
+                quote: '"Mendidik Hati, Menajamkan Akal, Menegakkan Adab Islami."',
+                name: "KH. Ahmad Madani, M.A.",
+                title: "Pimpinan Pesantren Daarul Muttaqien",
+                image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAQwjO1bfriwOeK8QY1R3JMdlEktFIgqipVz2UgmskvUvBBDAMAy1oj0rcgmD_YBaVFnSwoEQylaSjSjSiTZb5j7w6hcRtLwMGjkqu9r40YjZC1wS2K0QJJxKg5MXas-Jkle2p5Q1SPZ1dcJ3iGJuplrQUNXZ8ODuu1B_AMDXJGU8EFlEehW5yCdtPSGzytIhKCmHD0YizY1q3K1Pon6gGsJC_8i5iOryY19kaWA8Q"
+            },
+            {
+                quote: '"Mendidik dengan ilmu, membimbing dengan keteladanan, dan mengabdi untuk kemaslahatan umat."',
+                name: "Nama Pimpinan Pesantren",
+                title: "Pimpinan Pesantren Daarul Muttaqien (sementara)",
+                image: ""
             }
+        ];
+        let activeLeaderQuote = 0;
+        let leaderQuoteTimer;
+
+        function showLeaderQuote(index) {
+            activeLeaderQuote = (index + leaderQuotes.length) % leaderQuotes.length;
+            const leader = leaderQuotes[activeLeaderQuote];
+            const image = document.getElementById('leader-image');
+            const imagePlaceholder = document.getElementById('leader-image-placeholder');
+
+            document.getElementById('leader-quote').textContent = leader.quote;
+            document.getElementById('leader-name').textContent = leader.name;
+            document.getElementById('leader-title').textContent = leader.title;
+            image.alt = leader.image ? leader.name + " - " + leader.title : "";
+            image.classList.toggle('hidden', !leader.image);
+            imagePlaceholder.classList.toggle('hidden', Boolean(leader.image));
+            document.getElementById('leader-dot-0').classList.toggle('bg-primary', activeLeaderQuote === 0);
+            document.getElementById('leader-dot-0').classList.toggle('bg-outline-variant', activeLeaderQuote !== 0);
+            document.getElementById('leader-dot-0').setAttribute('aria-pressed', String(activeLeaderQuote === 0));
+            document.getElementById('leader-dot-1').classList.toggle('bg-primary', activeLeaderQuote === 1);
+            document.getElementById('leader-dot-1').classList.toggle('bg-outline-variant', activeLeaderQuote !== 1);
+            document.getElementById('leader-dot-1').setAttribute('aria-pressed', String(activeLeaderQuote === 1));
         }
+
+        function changeLeaderQuote(direction) {
+            showLeaderQuote(activeLeaderQuote + direction);
+        }
+
+        function resetLeaderQuoteTimer() {
+            window.clearInterval(leaderQuoteTimer);
+            leaderQuoteTimer = window.setInterval(function () {
+                changeLeaderQuote(1);
+            }, 7000);
+        }
+
+        document.getElementById('profil').addEventListener('mouseenter', function () {
+            window.clearInterval(leaderQuoteTimer);
+        });
+        document.getElementById('profil').addEventListener('mouseleave', resetLeaderQuoteTimer);
+        document.getElementById('profil').addEventListener('focusin', function () {
+            window.clearInterval(leaderQuoteTimer);
+        });
+        document.getElementById('profil').addEventListener('focusout', function (event) {
+            if (!event.relatedTarget || !this.contains(event.relatedTarget)) {
+                resetLeaderQuoteTimer();
+            }
+        });
+        resetLeaderQuoteTimer();
 
         function scrollFacilities(direction) {
             const container = document.getElementById('facilities-carousel');
